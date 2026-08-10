@@ -1,0 +1,40 @@
+@use '../../styles/variables' as *;
+
+.primary-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 96rpx;
+  border-radius: 16rpx;
+  box-sizing: border-box;
+
+  &__text {
+    font-size: 32rpx;
+    font-weight: 500;
+  }
+
+  &--solid {
+    background: $color-primary;
+
+    .primary-btn__text {
+      color: #fff;
+    }
+  }
+
+  &--outline {
+    background: #fff;
+    border: 2rpx solid $color-card-border;
+
+    .primary-btn__text {
+      color: $color-text;
+    }
+  }
+
+  &--hover {
+    opacity: 0.85;
+  }
+
+  &--disabled {
+    opacity: 0.5;
+  }
+}

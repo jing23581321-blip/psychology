@@ -1,0 +1,36 @@
+@use '../../../styles/page' as *;
+
+.scenario {
+  &__text {
+    white-space: pre-line;
+  }
+
+  &__options {
+    margin-top: 40rpx;
+    display: flex;
+    flex-direction: column;
+    gap: 24rpx;
+  }
+
+  &__option {
+    padding: 32rpx 28rpx;
+    border: 2rpx solid $color-card-border;
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &--active {
+      border-color: $color-primary;
+      background: rgba(47, 107, 255, 0.06);
+
+      .scenario__option-text { color: $color-primary; font-weight: 600; }
+    }
+
+    &--locked { opacity: 0.7; }
+  }
+
+  &__option-text { font-size: 32rpx; color: $color-text; }
+  &__option-check { font-size: 32rpx; color: $color-primary; font-weight: 700; }
+}

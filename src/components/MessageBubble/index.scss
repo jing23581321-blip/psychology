@@ -1,0 +1,52 @@
+@use '../../styles/variables' as *;
+
+.bubble {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 32rpx;
+  padding: 0 32rpx;
+
+  &--user {
+    justify-content: flex-end;
+  }
+
+  &--ai {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__avatar {
+    margin-right: 16rpx;
+    flex: none;
+    margin-top: 4rpx;
+  }
+
+  &__body {
+    max-width: 72%;
+    padding: 24rpx 28rpx;
+    border-radius: 24rpx;
+
+    &--ai {
+      background: $color-low-bg;
+      border-top-left-radius: 8rpx;
+    }
+
+    &--user {
+      background: $color-primary;
+      border-top-right-radius: 8rpx;
+    }
+  }
+
+  &__text {
+    font-size: 30rpx;
+    line-height: 46rpx;
+
+    .bubble__body--ai & {
+      color: $color-text;
+    }
+
+    .bubble__body--user & {
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@use '../../styles/variables' as *;
+
+.launcher {
+  min-height: 100vh;
+  background: $color-bg;
+  padding: 96rpx 48rpx;
+  box-sizing: border-box;
+
+  &__title {
+    display: block;
+    font-size: 44rpx;
+    font-weight: 600;
+    color: $color-text;
+  }
+
+  &__sub {
+    display: block;
+    margin-top: 12rpx;
+    font-size: 26rpx;
+    color: $color-text-secondary;
+  }
+
+  &__list {
+    margin-top: 48rpx;
+  }
+
+  &__item {
+    padding: 32rpx;
+    border: 2rpx solid $color-card-border;
+    border-radius: $radius-card;
+    margin-bottom: 24rpx;
+  }
+
+  &__item-title {
+    display: block;
+    font-size: 32rpx;
+    font-weight: 500;
+    color: $color-text;
+    margin-bottom: 24rpx;
+    line-height: 46rpx;
+  }
+}

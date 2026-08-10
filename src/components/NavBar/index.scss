@@ -1,0 +1,50 @@
+@use '../../styles/variables' as *;
+
+.navbar {
+  background: $color-bg;
+
+  &__bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 88rpx;
+    padding: 0 24rpx;
+  }
+
+  &__close {
+    width: 56rpx;
+    height: 56rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &--active {
+      opacity: 0.5;
+    }
+  }
+
+  &__close-icon {
+    font-size: 40rpx;
+    color: $color-text;
+  }
+
+  &__title {
+    flex: 1;
+    text-align: center;
+    font-size: 32rpx;
+    font-weight: 500;
+    color: $color-text;
+  }
+
+  &__progress {
+    height: 6rpx;
+    background: $color-low-bg;
+  }
+
+  &__progress-fill {
+    height: 6rpx;
+    background: $color-primary;
+    transition: width 0.3s ease;
+  }
+}

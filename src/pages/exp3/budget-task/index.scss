@@ -1,0 +1,70 @@
+@use '../../../styles/page' as *;
+
+.budget {
+  &__summary {
+    margin-bottom: 32rpx;
+    padding: 20rpx 24rpx;
+    border-radius: 12rpx;
+    background: $color-low-bg;
+
+    &--ok { background: $color-high-bg; }
+    &--over { background: #fff0f0; }
+  }
+
+  &__summary-text {
+    font-size: 30rpx;
+    font-weight: 600;
+    color: $color-text;
+
+    .budget__summary--ok & { color: $color-high-text; }
+    .budget__summary--over & { color: $color-price; }
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 24rpx;
+    gap: 16rpx;
+  }
+
+  &__label-wrap {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 12rpx;
+  }
+
+  &__label {
+    font-size: 28rpx;
+    color: $color-text;
+  }
+
+  &__tag {
+    font-size: 22rpx;
+    color: $color-primary;
+    border: 2rpx solid $color-primary;
+    border-radius: 8rpx;
+    padding: 2rpx 10rpx;
+  }
+
+  &__input {
+    width: 160rpx;
+    height: 80rpx;
+    padding: 0 16rpx;
+    border: 2rpx solid $color-card-border;
+    border-radius: 12rpx;
+    font-size: 30rpx;
+    color: $color-text;
+    text-align: right;
+    box-sizing: border-box;
+  }
+
+  &__unit {
+    font-size: 28rpx;
+    color: $color-text-secondary;
+    flex: none;
+    width: 32rpx;
+  }
+}

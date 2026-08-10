@@ -1,0 +1,42 @@
+@use '../../../styles/page' as *;
+
+.clothing {
+  &__options {
+    display: flex;
+    flex-direction: row;
+    margin-top: 32rpx;
+    margin-bottom: 48rpx;
+    gap: 20rpx;
+  }
+
+  &__option {
+    flex: 1;
+    border: 2rpx solid $color-card-border;
+    border-radius: $radius-card;
+    padding: 24rpx;
+    box-sizing: border-box;
+  }
+
+  &__label {
+    display: block;
+    font-size: 32rpx;
+    font-weight: 600;
+    color: $color-text;
+    margin-bottom: 12rpx;
+  }
+
+  &__desc {
+    display: block;
+    font-size: 26rpx;
+    color: $color-text-secondary;
+    line-height: 40rpx;
+    margin-bottom: 12rpx;
+  }
+
+  &__price {
+    display: block;
+    font-size: 28rpx;
+    font-weight: 500;
+    color: $color-price;
+  }
+}

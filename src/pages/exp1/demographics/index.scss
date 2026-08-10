@@ -1,0 +1,61 @@
+@use '../../../styles/page' as *;
+
+.demo {
+  &__group {
+    margin-bottom: 40rpx;
+  }
+
+  &__label {
+    display: block;
+    font-size: 30rpx;
+    font-weight: 500;
+    color: $color-text;
+    margin-bottom: 20rpx;
+  }
+
+  &__input {
+    height: 88rpx;
+    padding: 0 24rpx;
+    border: 2rpx solid $color-card-border;
+    border-radius: 16rpx;
+    font-size: 30rpx;
+    color: $color-text;
+    box-sizing: border-box;
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &__option {
+    padding: 0 32rpx;
+    height: 76rpx;
+    border: 2rpx solid $color-card-border;
+    border-radius: 16rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20rpx;
+    margin-bottom: 20rpx;
+
+    &--active {
+      background: $color-primary;
+      border-color: $color-primary;
+
+      .demo__option-text {
+        color: #fff;
+      }
+    }
+
+    &--hover {
+      opacity: 0.8;
+    }
+  }
+
+  &__option-text {
+    font-size: 28rpx;
+    color: $color-text;
+  }
+}

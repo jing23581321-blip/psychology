@@ -1,0 +1,45 @@
+@use '../../styles/variables' as *;
+
+.swr {
+  padding: 32rpx 0 0;
+
+  &__slider-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16rpx;
+  }
+
+  &__slider {
+    flex: 1;
+  }
+
+  &__end-label {
+    font-size: 24rpx;
+    color: $color-text-secondary;
+    flex: none;
+    width: 48rpx;
+    text-align: center;
+  }
+
+  &__score-display {
+    display: block;
+    text-align: center;
+    font-size: 40rpx;
+    font-weight: 700;
+    color: $color-primary;
+    margin: 16rpx 0 32rpx;
+  }
+
+  &__reason {
+    width: 100%;
+    min-height: 120rpx;
+    padding: 20rpx 24rpx;
+    border: 2rpx solid $color-card-border;
+    border-radius: 16rpx;
+    font-size: 28rpx;
+    color: $color-text;
+    box-sizing: border-box;
+    margin-bottom: 24rpx;
+  }
+}

@@ -1,0 +1,66 @@
+@use '../../styles/variables' as *;
+
+.feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40rpx 48rpx;
+
+  &__title {
+    margin-top: 24rpx;
+    font-size: 32rpx;
+    font-weight: 600;
+    color: $color-text;
+  }
+
+  &__card {
+    width: 100%;
+    margin-top: 32rpx;
+    padding: 36rpx 32rpx;
+    border-radius: $radius-card;
+    box-sizing: border-box;
+
+    &--high {
+      background: $color-high-bg;
+      border: 2rpx solid $color-high-border;
+    }
+
+    &--low {
+      background: $color-low-bg;
+      border: 2rpx solid $color-low-border;
+    }
+  }
+
+  &__text {
+    display: block;
+    font-size: 30rpx;
+    line-height: 48rpx;
+
+    &--high {
+      color: $color-high-text;
+      font-weight: 500;
+    }
+
+    &--low {
+      color: $color-low-text;
+    }
+  }
+
+  &__extra {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 24rpx;
+  }
+
+  &__emoji {
+    font-size: 48rpx;
+  }
+
+  &__encourage {
+    margin-top: 12rpx;
+    font-size: 28rpx;
+    font-weight: 500;
+    color: $color-high-text;
+  }
+}

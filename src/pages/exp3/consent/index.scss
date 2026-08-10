@@ -1,0 +1,31 @@
+@use '../../../styles/page' as *;
+
+.consent {
+  &__check {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 48rpx;
+
+    &--hover { opacity: 0.7; }
+  }
+
+  &__box {
+    width: 44rpx;
+    height: 44rpx;
+    border-radius: 8rpx;
+    border: 2rpx solid $color-card-border;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16rpx;
+
+    &--checked {
+      background: $color-primary;
+      border-color: $color-primary;
+    }
+  }
+
+  &__tick { color: #fff; font-size: 30rpx; }
+  &__label { font-size: 30rpx; color: $color-text; }
+}

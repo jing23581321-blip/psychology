@@ -1,0 +1,28 @@
+@use '../../../styles/page' as *;
+
+.end {
+  align-items: center;
+  justify-content: center;
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120rpx 64rpx;
+  }
+
+  &__title {
+    margin-top: 48rpx;
+    font-size: 40rpx;
+    font-weight: 600;
+    color: $color-text;
+  }
+
+  &__text {
+    margin-top: 24rpx;
+    font-size: 30rpx;
+    color: $color-text-secondary;
+    line-height: 48rpx;
+    text-align: center;
+  }
+}

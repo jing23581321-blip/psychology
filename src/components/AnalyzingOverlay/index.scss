@@ -1,0 +1,58 @@
+@use '../../styles/variables' as *;
+
+.analyzing {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120rpx 48rpx;
+
+  &__title {
+    margin-top: 48rpx;
+    font-size: 34rpx;
+    font-weight: 600;
+    color: $color-text;
+  }
+
+  &__sub {
+    margin-top: 16rpx;
+    font-size: 26rpx;
+    color: $color-text-secondary;
+  }
+
+  &__dots {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40rpx;
+  }
+
+  &__dot {
+    width: 18rpx;
+    height: 18rpx;
+    border-radius: 50%;
+    background: $color-primary;
+    margin: 0 8rpx;
+    opacity: 0.4;
+    animation: analyzing-blink 1.2s infinite;
+
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+  }
+}
+
+@keyframes analyzing-blink {
+  0%,
+  100% {
+    opacity: 0.3;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}

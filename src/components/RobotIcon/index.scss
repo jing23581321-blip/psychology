@@ -1,0 +1,28 @@
+@use '../../styles/variables' as *;
+
+.robot {
+  border-radius: 50%;
+  background: #eef1fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__head {
+    width: 56%;
+    height: 44%;
+    background: #d7ddf6;
+    border-radius: 18rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__eye {
+    width: 18rpx;
+    height: 18rpx;
+    border-radius: 50%;
+    background: $color-primary;
+    margin: 0 8rpx;
+  }
+}

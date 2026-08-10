@@ -1,0 +1,57 @@
+@use '../../../styles/page' as *;
+
+.logo-task {
+  &__options {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40rpx;
+  }
+
+  &__card {
+    flex: 1;
+    background: #fff;
+    border: 3rpx solid $color-card-border;
+    border-radius: $radius-card;
+    padding: 24rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &:first-child {
+      margin-right: 20rpx;
+    }
+
+    &--selected {
+      border-color: $color-primary;
+      background: #f5f8ff;
+    }
+
+    &--hover {
+      opacity: 0.9;
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: 200rpx;
+    background: $color-low-bg;
+    border-radius: 12rpx;
+  }
+
+  &__label {
+    margin-top: 16rpx;
+    font-size: 28rpx;
+    font-weight: 500;
+    color: $color-text;
+  }
+
+  &__question {
+    display: block;
+    margin-top: 40rpx;
+    font-size: 32rpx;
+    font-weight: 600;
+    color: $color-text;
+    line-height: 48rpx;
+  }
+}

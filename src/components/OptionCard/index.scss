@@ -1,0 +1,97 @@
+@use '../../styles/variables' as *;
+
+.option-card {
+  flex: 1;
+  background: #fff;
+  border: 3rpx solid $color-card-border;
+  border-radius: $radius-card;
+  padding: 20rpx;
+  box-sizing: border-box;
+
+  &--selected {
+    border-color: $color-primary;
+    background: #f5f8ff;
+  }
+
+  &--hover {
+    opacity: 0.9;
+  }
+
+  &__media {
+    position: relative;
+    width: 100%;
+    height: 220rpx;
+    background: $color-low-bg;
+    border-radius: 12rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 12rpx;
+    left: 12rpx;
+    width: 44rpx;
+    height: 44rpx;
+    border-radius: 50%;
+    background: $color-primary;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  &__badge-text {
+    color: #fff;
+    font-size: 26rpx;
+    font-weight: 600;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+  }
+
+  &__name {
+    display: block;
+    margin-top: 16rpx;
+    font-size: 28rpx;
+    font-weight: 500;
+    color: $color-text;
+  }
+
+  &__price {
+    display: block;
+    margin-top: 8rpx;
+    font-size: 30rpx;
+    font-weight: 600;
+    color: $color-price;
+  }
+
+  &__attrs {
+    margin-top: 12rpx;
+  }
+
+  &__attr {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 6rpx;
+  }
+
+  &__dot {
+    font-size: 26rpx;
+    color: $color-text-secondary;
+    margin-right: 8rpx;
+    line-height: 36rpx;
+  }
+
+  &__attr-text {
+    flex: 1;
+    font-size: 24rpx;
+    color: $color-text-secondary;
+    line-height: 36rpx;
+  }
+}
