@@ -12,7 +12,7 @@ import { submitRoundData } from '@/services/api'
 import { STIMULI, type StimulusOption } from '@/constants/exp1/stimuli'
 import {
   LOW_SYCOPHANCY_FEEDBACK,
-  pickHighFeedback
+  HIGH_SYCOPHANCY_FEEDBACK2
 } from '@/constants/exp1/feedbackPool'
 import './index.scss'
 
@@ -31,7 +31,6 @@ export default function Round() {
   const [displayOrder, setDisplayOrder] = useState<[StimulusOption, StimulusOption]>(stimulus.options)
   const [feedbackMessage, setFeedbackMessage] = useState('')
   const startTimeRef = useRef<number>(Date.now())
-  const prevFeedbackIndexRef = useRef<number>(-1)
 
   // On entering each round, randomly assign which product gets the A label (left slot).
   // Position is fixed: A always left, B always right.
@@ -77,9 +76,8 @@ export default function Round() {
     setPhase('analyzing')
 
     if (state.group === 'high_sycophancy') {
-      const picked = pickHighFeedback(prevFeedbackIndexRef.current)
-      prevFeedbackIndexRef.current = picked.index
-      setFeedbackMessage(picked.message)
+      const choiceIndex = option.label === 'A' ? 0 : 1
+      setFeedbackMessage(HIGH_SYCOPHANCY_FEEDBACK2[round - 1][choiceIndex])
     } else {
       setFeedbackMessage(LOW_SYCOPHANCY_FEEDBACK)
     }
