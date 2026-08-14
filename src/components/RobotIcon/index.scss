@@ -4,25 +4,82 @@
   border-radius: 50%;
   background: #eef1fb;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 
-  &__head {
-    width: 56%;
-    height: 44%;
-    background: #d7ddf6;
-    border-radius: 18rpx;
+  &__antenna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 4rpx;
+  }
+
+  &__antenna-ball {
+    width: 16rpx;
+    height: 16rpx;
+    border-radius: 50%;
+    background: $color-primary;
+  }
+
+  &__antenna-stem {
+    width: 6rpx;
+    height: 16rpx;
+    border-radius: 3rpx;
+    background: $color-primary;
+    margin-top: -4rpx;
+  }
+
+  &__face {
+    width: 60%;
+    height: 50%;
+    background: $color-primary;
+    border-radius: 18%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8rpx;
+  }
+
+  &__eyes {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    gap: 16rpx;
   }
 
   &__eye {
-    width: 18rpx;
-    height: 18rpx;
+    width: 24rpx;
+    height: 24rpx;
     border-radius: 50%;
-    background: $color-primary;
-    margin: 0 8rpx;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__pupil {
+    width: 11rpx;
+    height: 11rpx;
+    border-radius: 50%;
+    background: $color-primary-dark;
+  }
+
+  &__mouth {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 7rpx;
+  }
+
+  &__dot {
+    width: 9rpx;
+    height: 9rpx;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
   }
 }

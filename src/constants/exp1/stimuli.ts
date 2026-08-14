@@ -9,6 +9,8 @@ import cupA from '@/assets/exp1/products/cup_a.png'
 import cupB from '@/assets/exp1/products/cup_b.png'
 import lampA from '@/assets/exp1/products/lamp_a.png'
 import lampB from '@/assets/exp1/products/lamp_b.png'
+import plateA from '@/assets/exp1/products/plate_a.png'
+import plateB from '@/assets/exp1/products/plate_b.png'
 
 export interface StimulusOption {
   // Stable id independent of A/B label or on-screen side.
@@ -133,7 +135,7 @@ export const STIMULI: RoundStimulus[] = [
         name: '简约餐盘',
         price: '¥699',
         attributes: ['极简造型', '陶瓷材质', '哑光质感'],
-        image: placeholder
+        image: plateA
       },
       {
         id: 'plate_b',
@@ -141,7 +143,7 @@ export const STIMULI: RoundStimulus[] = [
         name: '设计餐盘',
         price: '¥4599',
         attributes: ['图案设计', '彩色釉面', '装饰元素'],
-        image: placeholder
+        image: plateB
       }
     ]
   },
