@@ -4,7 +4,6 @@ import './index.scss'
 interface OptionCardProps {
   badge: string
   name: string
-  price: string
   attributes: string[]
   image: string
   selected?: boolean
@@ -14,7 +13,6 @@ interface OptionCardProps {
 export default function OptionCard({
   badge,
   name,
-  price,
   attributes,
   image,
   selected = false,
@@ -33,7 +31,6 @@ export default function OptionCard({
         <Image className='option-card__image' src={image} mode='aspectFit' />
       </View>
       <Text className='option-card__name'>{name}</Text>
-      <Text className='option-card__price'>{price}</Text>
       <View className='option-card__attrs'>
         {attributes.map((attr) => (
           <View className='option-card__attr' key={attr}>

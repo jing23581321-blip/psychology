@@ -132,10 +132,10 @@ export default function Round() {
                   key={option.id}
                   badge={option.label}
                   name={option.name}
-                  price={option.price}
                   attributes={option.attributes}
                   image={option.image}
                   selected={selectedId === option.id}
+
                   onClick={() => choose(option)}
                 />
               ))}
